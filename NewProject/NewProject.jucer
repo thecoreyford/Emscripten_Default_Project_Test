@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="cAJAfT" name="NewProject" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="u9unUM" name="NewProject">
+    <GROUP id="{0F8120B7-C962-48B8-4BA4-EEFF6B449FB9}" name="Source">
+      <FILE id="TvQgOz" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="cuof2V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="BbGMqT" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="NewProject"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Librarys/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Librarys/JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <LINUX_MAKE targetFolder="emsdk-build" extraCompilerFlags="-s USE_PTHREADS=1 -s USE_FREETYPE=1 -s DISABLE_EXCEPTION_CATCHING=0"
+                extraLinkerFlags="-s USE_PTHREADS=1 -s USE_FREETYPE=1 -s DISABLE_EXCEPTION_CATCHING=0 -s LLD_REPORT_UNDEFINED &#10;-s PROXY_TO_PTHREAD=1 -s PTHREAD_POOL_SIZE=20&#10;-s TOTAL_MEMORY=256MB&#10;-s NO_EXIT_RUNTIME&#10;-s EXPORTED_FUNCTIONS=&quot;['_main', '_juce_animationFrameCallback', '_juce_mouseCallback', '_juce_keyboardCallback', '_juce_inputCallback', '_rtmidi_onMidiMessageProc']&quot;&#10;-s EXTRA_EXPORTED_RUNTIME_METHODS=&quot;['cwrap']&quot;&#10;--preload-file ../../libs/juce_emscripten/examples/usr/X11R6/lib/X11/fonts/@/usr/X11R6/lib/X11/fonts/&#10;--emrun"
+                externalLibraries="openal" userNotes=" After resaving, do the following by hand:&#10;Remove $(shell pkg-config ...) from the Makefile;&#10;Change JUCE library path to juce_emscripten;&#10;Add .html extension to target app;&#10;Optionally, add -s SAFE_HEAP=1 -s ASSERTIONS=1 to JUCE_CFLAGS for Debug build;&#10;Optionally, add -s WASM_OBJECT_FILES=0 to JUCE_CFLAGS and --llvm-lto 1 to JUCE_LDFLAGS for Release build.">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_graphics" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_events" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_data_structures" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_core" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="~/libs/juce_emscripten/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="~/libs/juce_emscripten/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
